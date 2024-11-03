@@ -6,8 +6,10 @@ import LightbulbPage from '../pages/lightbulb_page'
 import Inicio from '../pages/inicio'
 import Postulaciones from '../pages/postulaciones'
 import InicioSesion from '../pages/inicio_sesion'
+import Carreras from '../pages/carreras'
 
 import NavBar from '../components/nav_bar'
+import BeneficiosMinisteriales from '../pages/beneficios'
 
 const Layout = () => {
   return (
@@ -22,6 +24,8 @@ const Layout = () => {
             <Route path='/postulaciones' element={<Postulaciones />} />
             <Route path='/iniciar-sesion' element={<InicioSesion />} />
             <Route path='/lightbulb' element={<LightbulbPage />} />
+            <Route path='/carreras' element={<Carreras />} />
+            <Route path='/beneficios' element={<BeneficiosMinisteriales />} />
           </Routes>
         </div>
       </div>
