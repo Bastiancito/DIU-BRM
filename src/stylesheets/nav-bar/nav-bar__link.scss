@@ -2,10 +2,12 @@
   display: inline-block;
   margin-right: 15px;
   padding: 8px;
-  color: rgb(4, 100, 253);
+  color: #b3cfde;
+  text-decoration: none;
 
   &--active {
-    background: #222;
-    color: white;
+    // background: #222;
+    color: #b3cfde;
+    text-decoration: underline;
   }
 }
