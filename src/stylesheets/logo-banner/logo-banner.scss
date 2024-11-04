@@ -1,0 +1,14 @@
+// .logo-banner:first-child{
+//     width: 100px;
+// }
+.logo-banner__img {
+    display: block;
+}
+
+.logo-banner__img:first-of-type {
+    width: 250px;
+}
+
+.logo-banner__img:last-of-type {
+    width: 100%;
+}
