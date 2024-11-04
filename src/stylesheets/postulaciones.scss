@@ -1,0 +1,38 @@
+.background-main {
+  background-color: #ffffff;
+
+}
+
+.header {
+    background-color: rgb(241, 241, 241);
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+}
+
+.header a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.header a:hover {
+    color: #0056b3;
+}
+
+
+.resaltar{
+    font-family: /*i want to use arial*/ 'Calibri', sans-serif; 
+    
+}
+
+.header-options {
+    display: flex;
+    gap: 1rem;
+}
