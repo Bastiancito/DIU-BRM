@@ -15,7 +15,6 @@ const Layout = () => {
   return (
     <BrowserRouter>
       <div className='layout'>
-        {/* <h1 className='layout__title'>Interfaz energética</h1> */}
         <NavBar />
         <div className='layout__page'>
           <Routes>  
