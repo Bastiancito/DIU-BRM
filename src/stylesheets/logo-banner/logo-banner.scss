@@ -1,12 +1,10 @@
-// .logo-banner:first-child{
-//     width: 100px;
-// }
 .logo-banner__img {
     display: block;
 }
 
 .logo-banner__img:first-of-type {
     width: 250px;
+    margin: 20px 10px 20px 15%;
 }
 
 .logo-banner__img:last-of-type {

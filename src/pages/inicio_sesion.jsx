@@ -10,16 +10,20 @@ export const InicioSesion = () => {
 
   const navigate = useNavigate();
 
+  const getButtonClass = (isActive) => { 
+    const classes = ["div__button"];
+    if (isActive) classes.push("div__button--activate");
+    return classes.join(" ");
+  };
+
   function iniciarSesion() {
     setInicioSesion(true);
   }
 
   const handleLoginClick = () => {
     console.log("Sesión iniciada");
-    // Aquí puedes agregar la lógica adicional de inicio de sesión si es necesario
 
-    // Navegar a la página de inicio (o la ruta deseada)
-    navigate("/home"); // Reemplaza "/" con la ruta que desees
+    navigate("/home");
   };
 
   function registrarse() {
@@ -28,8 +32,9 @@ export const InicioSesion = () => {
   return (
     <>
       <LogoBanner className="logo-banner" />
-      {/* <p>¡Inicio de sesión!</p> */}
+      <div className="inicio-sesion__div">
       <button
+        className={getButtonClass(inicioSesion)}
         onClick={() => {
           iniciarSesion();
         }}
@@ -37,6 +42,7 @@ export const InicioSesion = () => {
         Iniciar Sesión
       </button>
       <button
+        className={getButtonClass(!inicioSesion)}
         onClick={() => {
           registrarse();
         }}
@@ -45,11 +51,11 @@ export const InicioSesion = () => {
       </button>
       {inicioSesion ? (
         <>
-          <p>
+          <p className="div__p">
             Para exalumnos ingresar con su RUT sin puntos ni guión y como
             contraseña su fecha de nacimiento en formato DDMMAA.
           </p>
-          <p>
+          <p className="div__p">
             Si no cuentas con RUT chileno puedes solicitar un RUT provisorio
             aquí.
           </p>
@@ -59,16 +65,18 @@ export const InicioSesion = () => {
           </p>
           <h2>Iniciar sesión con una cuenta local</h2>
           <p>Rut</p>
-          <input
+          <input 
             type="text"
+            className="div__input"
             placeholder="Escribe algo..."
-            value={rut} // Asigna el estado como el valor del input
-            onChange={(event) => setRut(event.target.value)} // Actualiza el estado cuando cambia el texto
+            value={rut} 
+            onChange={(event) => setRut(event.target.value)} 
             style={{ padding: "8px", fontSize: "16px", marginBottom: "10px" }}
           />
           <p>Contraseña</p>
           <input
             type="text"
+            className="div__input"
             placeholder="Escribe algo..."
             value={contrasena}
             onChange={(event) => setContrasena(event.target.value)}
@@ -77,7 +85,7 @@ export const InicioSesion = () => {
           <br />
           <button
             onClick={() => {
-              handleLoginClick()
+              handleLoginClick();
             }}
           >
             Iniciar Sesión
@@ -101,22 +109,25 @@ export const InicioSesion = () => {
           <p>Correo electronico</p>
           <input
             type="text"
+            className="div__input"
             placeholder="Escribe algo..."
-            value={rut} // Asigna el estado como el valor del input
-            onChange={(event) => setRut(event.target.value)} // Actualiza el estado cuando cambia el texto
+            value={rut} 
+            onChange={(event) => setRut(event.target.value)} 
             style={{ padding: "8px", fontSize: "16px", marginBottom: "10px" }}
           />
           <p>Rut</p>
           <input
             type="text"
+            className="div__input"
             placeholder="Escribe algo..."
-            value={rut} // Asigna el estado como el valor del input
-            onChange={(event) => setRut(event.target.value)} // Actualiza el estado cuando cambia el texto
+            value={rut} 
+            onChange={(event) => setRut(event.target.value)} 
             style={{ padding: "8px", fontSize: "16px", marginBottom: "10px" }}
           />
           <p>Contraseña</p>
           <input
             type="text"
+            className="div__input"
             placeholder="Escribe algo..."
             value={contrasena}
             onChange={(event) => setContrasena(event.target.value)}
@@ -125,6 +136,7 @@ export const InicioSesion = () => {
           <p>Confirmar contraseña</p>
           <input
             type="text"
+            className="div__input"
             placeholder="Escribe algo..."
             value={contrasena}
             onChange={(event) => setContrasena(event.target.value)}
@@ -133,14 +145,16 @@ export const InicioSesion = () => {
           <br />
           <button
             onClick={() => {
-              console.log("Sesión iniciada");
+              alert('Registrado, se inicia sesión');
+              navigate("/home");
             }}
           >
             Registrarse
           </button>
         </>
       )}
-      <Footer className="footer" />
+      </div>
+      <Footer />
     </>
   );
 };

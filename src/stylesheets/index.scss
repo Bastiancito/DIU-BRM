@@ -1,16 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
-@import './layout/index.scss';
-@import './nav-bar/index.scss';
-@import './lightbulb-page/index.scss';
-@import './logo-banner/index.scss';
-@import './footer/index.scss';
+@import "./layout/index.scss";
+@import "./nav-bar/index.scss";
+@import "./lightbulb-page/index.scss";
+@import "./logo-banner/index.scss";
+@import "./footer/index.scss";
+@import "./inicio-sesion/index.scss";
 
-html, body {
+html,
+body {
   padding: 0;
   margin: 0;
 }
 
 * {
-  font-family: 'Open Sans', sans-serif;
+  // font-family: 'Open Sans', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }

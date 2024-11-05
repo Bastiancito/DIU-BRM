@@ -2,9 +2,10 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="footer">
+      <section className="footer__section">
       <div>
-        <ul>
+        <ul className="section__ul">
           <li>Universidad</li>
           <li>Nuestra Historia</li>
           <li>Federico Santa María</li>
@@ -13,12 +14,13 @@ const Footer = () => {
           <li>Organización</li>
           <li>Información Estadística USM</li>
         </ul>
-        <ul>
+          <ul className="section__ul">
           <li>CAMPUS Y SEDES</li>
           <li>Información Campus y Sedes</li>
           <li>Tour Virtual</li>
         </ul>
-        <ul>
+        </div>
+        <ul className="section__ul">
           <li>EXTENSIÓN Y CULTURA</li>
           <li>Dirección General de Comunicaciones</li>
           <li>Dirección de Vinculación con el Medio</li>
@@ -29,7 +31,7 @@ const Footer = () => {
           <li>Radio USM</li>
           <li>Cultura USM</li>
         </ul>
-        <ul>
+        <ul className="section__ul">
           <li>SERVICIOS</li>
           <li>Aula USM</li>
           <li>Biblioteca USM</li>
@@ -42,10 +44,10 @@ const Footer = () => {
           <li>Directorio USM</li>
           <li>Trabaja con Nosotros</li>
         </ul>
-      </div>
-      <div>
+      </section>    
+      <section className="footer__section">
         <p>Sitio web administrado por la Dirección de Admisión</p>
-      </div>
+      </section>
     </footer>
   );
 };

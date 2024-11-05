@@ -1,0 +1,30 @@
+.inicio-sesion__div {
+  margin: 50px;
+}
+.div__p {
+  font-weight: 400;
+}
+.div__button {
+  font-size: 14px;
+  border: 0;
+  background-color: white;
+
+  border-bottom: 2px solid #bfbfbf;
+
+
+  &--activate {
+    border-left: 2px solid #bfbfbf; 
+    border-right: 2px solid #bfbfbf; 
+    border-top: 2px solid #bfbfbf; 
+    border-bottom: 0;
+
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+  }
+}
+
+.div__input{
+    border-radius: 50px;
+    color: #495057;
+    border: 1px solid #949494;
+}
