@@ -146,6 +146,7 @@ export const InicioSesion = () => {
           <button
             onClick={() => {
               alert('Registrado, se inicia sesión');
+              navigate("/home");
             }}
           >
             Registrarse
