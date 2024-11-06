@@ -73,7 +73,7 @@ export const HomePage = () => {
           </div>
           <div className='right-div'>
             <p>Verifica nuestras fechas importantes!</p>
-            <button className='text-button'>Ver fechas</button>
+            <button className='text-button'><a href="/calendario">Ver fechas</a></button>
           </div>
         </div>
       </div>
