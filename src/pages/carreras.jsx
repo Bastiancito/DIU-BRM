@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import "../stylesheets/carreras.scss";
 import { Link } from 'react-router-dom';
+import Footer from '../components/footer';
 
 
 const Carreras = () => {
-    //estado para manejar la selección de filtros
     const [selectedFilters, setSelectedFilters] = useState({
         personas: false,
         maquinas: false,
@@ -15,7 +15,6 @@ const Carreras = () => {
         ayuda: false,
     });
 
-    //función q usamos para alternar la selección de un filtro
     const toggleFilter = (filter) => {
         setSelectedFilters((prevFilters) => ({
             ...prevFilters,
@@ -24,26 +23,20 @@ const Carreras = () => {
     };
 
 
-    //función q maneja la selección de una carrera
     const handleCareerSelection = (career) => {
         alert(`Seleccionaste ${career}`);
     };
 
     return (
         <div>
-            {/* Línea azul superior */}
             <div className="header-line"></div>
 
-            {/* Contenedor principal */}
             <div className="container">
-                {/* Botón de volver en amarillo usando Link */}
                 <Link to="/postulaciones" className="back-button">volver</Link>
 
 
-                {/* Título */}
                 <h1>Explora carreras</h1>
 
-                {/* Filtros en rojo */}
                 <div className="filters">
                     {Object.keys(selectedFilters).map((filterKey) => (
                         <button
@@ -57,7 +50,6 @@ const Carreras = () => {
                     <button className="filter">+</button>
                 </div>
 
-                {/* Carreras ideales */}
                 <h2>Tus carreras ideales...</h2>
                 <div className="ideal-careers">
                     <button className="career-button" onClick={() => handleCareerSelection('Ingeniería Civil Informática')}>
@@ -71,7 +63,6 @@ const Carreras = () => {
                     </button>
                 </div>
 
-                {/* Tabla de información */}
                 <div className="info-table">
                     <h3>información sobre nuestras carreras</h3>
                     <table>
@@ -98,11 +89,11 @@ const Carreras = () => {
                                 <td>80</td>
                                 <td>60</td>
                             </tr>
-                            {/* Agrega más filas según sea necesario */}
                         </tbody>
                     </table>
                 </div>
             </div>
+            <Footer className='footer' />
         </div>
     );
 };
