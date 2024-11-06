@@ -1,0 +1,49 @@
+.calendario {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    max-width: 500px;
+    margin: 0 auto;
+  
+    &__header {
+      display: contents;
+      font-weight: bold;
+      text-align: center;
+    }
+  
+    &__day {
+      padding: 10px;
+      background-color: #f0f0f0;
+      border: 1px solid #ddd;
+    }
+  
+    &__body {
+      display: contents;
+    }
+  
+    &__week {
+      display: contents;
+    }
+  
+    &__cell {
+      padding: 20px;
+      text-align: center;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  
+.calendario__a{
+    margin-left: 10%;
+    text-decoration: none;
+    background-color: #005e90;
+    color: white;
+    padding: 10px 50px 10px 50px;
+    border-radius: 5px;
+}
