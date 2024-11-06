@@ -7,6 +7,7 @@ import Inicio from '../pages/inicio'
 import Postulaciones from '../pages/postulaciones'
 import InicioSesion from '../pages/inicio_sesion'
 import Carreras from '../pages/carreras'
+import Calendario from '../pages/calendario'
 
 import NavBar from '../components/nav_bar'
 import BeneficiosMinisteriales from '../pages/beneficios'
@@ -20,6 +21,7 @@ const Layout = () => {
           <Routes>  
             <Route path='/home' element={<HomePage />} />
             <Route path='/inicio' element={<Inicio />} />
+            <Route path='/calendario' element={<Calendario />} />
             <Route path='/postulaciones' element={<Postulaciones />} />
             <Route path='/iniciar-sesion' element={<InicioSesion />} />
             <Route path='/lightbulb' element={<LightbulbPage />} />
