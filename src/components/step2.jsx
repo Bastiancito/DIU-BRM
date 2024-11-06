@@ -10,8 +10,8 @@ const Step2 = ({ onBack, onNext }) => {
       <label htmlFor='email'>Email</label>
       <input type='email' id='email' className='input' />
 
-      <button className='button' onClick={onBack}>Retroceder</button>
-      <button className='button' onClick={onNext}>Siguiente</button>
+      <button className='button-admision' onClick={onBack}>Retroceder</button>
+      <button className='button-admision' onClick={onNext}>Siguiente</button>
     </div>
   );
 };

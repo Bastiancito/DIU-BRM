@@ -16,7 +16,7 @@ const Step1 = ({ onNext }) => {
           <option value="Admision especial">Admisión Especial</option>
         </select>
       </div>
-      <button className='button' onClick={onNext}>Siguiente</button>
+      <button className='button-admision' onClick={onNext}>Siguiente</button>
     </div>
   );
 };

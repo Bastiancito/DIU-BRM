@@ -1,5 +1,5 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useEffect } from "react";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
 
 export const NavBar = () => {
   const navLinkClass = ({ isActive }) => {
@@ -7,6 +7,17 @@ export const NavBar = () => {
     if (isActive) classes.push("nav-bar__link--active");
     return classes.join(" ");
   };
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === "/") {
+      navigate("/inicio", { replace: true });
+    }
+  }, [location, navigate]);
+
+  
   return (
     <nav className="nav-bar">
       <NavLink className={navLinkClass} to="/usm">

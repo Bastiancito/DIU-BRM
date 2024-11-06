@@ -12,8 +12,8 @@ const Step6 = ({ onBack }) => {
 
       </ul>
       
-      <button className='button' onClick={onBack}>Retroceder</button>
-      <button className='button' onClick={() => alert('¡Postulación completada!')}>Finalizar</button>
+      <button className='button-admision' onClick={onBack}>Retroceder</button>
+      <button className='button-admision' onClick={() => alert('¡Postulación completada!')}>Finalizar</button>
     </div>
   );
 };

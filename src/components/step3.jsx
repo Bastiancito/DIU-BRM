@@ -10,8 +10,8 @@ const Step3 = ({ onBack, onNext }) => {
       <label htmlFor='institution'>Institución</label>
       <input type='text' id='institution' className='input' placeholder='Ingrese el nombre de la institución' />
 
-      <button className='button' onClick={onBack}>Retroceder</button>
-      <button className='button' onClick={onNext}>Siguiente</button>
+      <button className='button-admision' onClick={onBack}>Retroceder</button>
+      <button className='button-admision' onClick={onNext}>Siguiente</button>
     </div>
   );
 };

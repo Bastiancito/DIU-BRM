@@ -11,8 +11,8 @@ const Step5 = ({ onBack, onNext }) => {
         
       </select>
 
-      <button className='button' onClick={onBack}>Retroceder</button>
-      <button className='button' onClick={onNext}>Siguiente</button>
+      <button className='button-admision' onClick={onBack}>Retroceder</button>
+      <button className='button-admision' onClick={onNext}>Siguiente</button>
     </div>
   );
 };

@@ -7,8 +7,8 @@ const Step4 = ({ onBack, onNext }) => {
       <label htmlFor='extraInfo'>Información Adicional</label>
       <textarea id='extraInfo' className='input' placeholder='Ingrese información adicional...' rows='4'></textarea>
 
-      <button className='button' onClick={onBack}>Retroceder</button>
-      <button className='button' onClick={onNext}>Siguiente</button>
+      <button className='button-admision' onClick={onBack}>Retroceder</button>
+      <button className='button-admision' onClick={onNext}>Siguiente</button>
     </div>
   );
 };
