@@ -1,61 +1,79 @@
-import React from 'react';
-import LogoBanner from '../components/logo_banner';
+import React, { useState } from 'react';
 import Footer from '../components/footer';
 import '../stylesheets/postulaciones.scss';
+import Step1 from '../components/step1';
+import Step2 from '../components/step2';
+import Step3 from '../components/step3';
+import Step4 from '../components/step4';
+import Step5 from '../components/step5';
+import Step6 from '../components/step6';
+import { Link } from 'react-router-dom';
 
 export const Postulaciones = () => {
+  const [currentStep, setCurrentStep] = useState(0);
+  const steps = ['Datos Admision', 'Datos Personales', 'Datos Académicos', 'Datos Adicionales', 'Seleccion Carrera/Programa', 'Documentos'];
+
+  const handleNext = () => {
+    if (currentStep < steps.length - 1) {
+      setCurrentStep(currentStep + 1);
+    }
+  };
+
+  const handleBack = () => {
+    if (currentStep > 0) {
+      setCurrentStep(currentStep - 1);
+    }
+  };
+
+  const renderStep = () => {
+    switch (currentStep) {
+      case 0:
+        return <Step1 onNext={handleNext} />;
+      case 1:
+        return <Step2 onBack={handleBack} onNext={handleNext} />;
+      case 2:
+        return <Step3 onBack={handleBack} onNext={handleNext} />;
+      case 3:
+        return <Step4 onBack={handleBack} onNext={handleNext} />;
+      case 4:
+        return <Step5 onBack={handleBack} onNext={handleNext} />;
+      case 5:
+        return <Step6 onBack={handleBack} />;
+
+    }
+  };
+
   return (
     <>
       <div className='postulaciones-container'>
         <div className='left-container'>
           <div className='secuencia'>
-            <div className='paso'>
-              <p>Datos Admision</p>
-            </div>
-            <div className='paso'>
-              <p>Datos Personales</p>
-            </div>
-            <div className='paso'>
-              <p>Datos Academicos</p>
-            </div>
-            <div className='paso'>
-              <p>Datos Adicionales</p>
-            </div>
-            <div className='paso'>
-              <p>Seleccion Carrera/Programa</p>
-            </div>
-            <div className='paso'>
-              <p>Documentos</p>
-            </div>
+            {steps.map((step, index) => (
+              <div key={index} className={`paso ${currentStep === index ? 'active' : ''}`}>
+                <p>{step}</p>
+              </div>
+            ))}
           </div>
 
           <div className='header'>
-            {/* Primer Grupo: Selecciona el Período */}
-            <div>
-              <label htmlFor='periodSelect'>Selecciona el período</label>
-              <select id='periodSelect' className='select'>
-                <option value="Primer Periodo 2025">Primer Periodo 2025</option>
-              </select>
-            </div>
-
-            {/* Segundo Grupo: Selecciona tu Tipo de Postulación */}
-            <div>
-              <label htmlFor='admissionSelect'>Selecciona tu tipo de postulación</label>
-              <select id='admissionSelect' className='select'>
-                <option value="Admision especial">Admisión Especial</option>
-              </select>
-            </div>
-            <button className='button'>Siguiente</button>
+            {renderStep()}
           </div>
         </div>
 
-        {/* Contenedor para los nuevos divs a la derecha */}
         <div className='right-container'>
           <div className='right-div'>
-            <p>Contenido del Div 1</p> {/* Contenido del primer div */}
+            <p>Ya postulaste?</p>
+            <button className='text-button'>Ver estado de postulación</button>
           </div>
           <div className='right-div'>
-            <p>Contenido del Div 2</p> {/* Contenido del segundo div */}
+            <p>Quieres saber más sobre las carreras que tenemos para ofrecer?</p>
+            <Link to='/carreras'>
+              <button className='text-button'>Ver carreras</button>
+            </Link>
+          </div>
+          <div className='right-div'>
+            <p>Verifica nuestras fechas importantes!</p>
+            <button className='text-button'>Ver fechas</button>
           </div>
         </div>
       </div>
