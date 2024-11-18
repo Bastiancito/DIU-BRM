@@ -131,11 +131,10 @@
 
   .postulaciones-container {
     display: flex; 
-    justify-content: space-between; 
-    align-items: flex-start; 
     width: 100%; 
     margin: 0; 
-    background-color: #ffffff; 
+    background-color: #ffffff;
+    height: 95lvh;
   }
   
   .left-container {
@@ -143,6 +142,7 @@
     display: flex;
     flex-direction: column; 
     padding: 20px; 
+    align-self: center;
   }
   
   .right-container {
@@ -150,6 +150,7 @@
     flex-direction: column; 
     gap: 10px; 
     flex: 0 0 20%; 
+    align-self: center;
   }
   
   .secuencia {

@@ -1,12 +1,13 @@
 import React from 'react';
 import '../stylesheets/beneficios.scss';
 import { Link } from 'react-router-dom';
+import Footer from '../components/footer';
 
 const BeneficiosMinisteriales = () => {
   return (
     <div className="beneficios-ministeriales">
       <h1>Beneficios Ministeriales</h1>
-      <Link to="/postulaciones" className="back-button">‹ volver</Link> //REDIRIGE A POSTULACION
+      <Link to="/home" className="back-button">‹ volver</Link>
       <p>Revisa los beneficios a los que puedes optar:</p>
       <div className="upload-section">
         <label htmlFor="file-upload" className="custom-file-upload">
@@ -60,6 +61,7 @@ const BeneficiosMinisteriales = () => {
           Una beca es un apoyo económico que entrega el Ministerio de Educación para que puedas financiar parte del costo de tus estudios, cubriendo el total o parte del arancel anual de tu carrera y, en algunos casos, la matrícula.
         </p>
       </section>
+      <Footer className='footer' />
     </div>
   );
 };

@@ -2,18 +2,21 @@
     background-color: #005e90;
     color: white;
     font-size: 14px;
-    justify-content: space-around;
+    // justify-content: space-between;
+    width: 100%;
 }
 .footer__section{
     display: flex;
-    justify-content: center;
-    padding-left: 10%;
-    padding-right: 10%;
+    justify-content: space-between;
+    // padding: 0 10lvw 0 10lvw;
+    // padding-left: 10%;
+    // padding-right: 10%;
     gap: 50px;
 }
 
 .footer__section:first-of-type{
-    padding: 50px 0 50px 0;
+    // padding: 50px 0 50px 0;
+    padding: 50px 10lvw 50px 10lvw;
 }
 
 .section__ul{
@@ -29,6 +32,5 @@
 
 .footer__section:last-of-type{
     background-color: black;
-    justify-content: left;
-    padding-left: 10%;
+    padding-left: 10lvw;
 }

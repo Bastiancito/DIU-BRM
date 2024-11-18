@@ -1,9 +1,9 @@
 .calendario {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(7, 120px);
     gap: 5px;
-    max-width: 500px;
-    margin: 0 auto;
+    // max-width: 500px;
+    // margin: 0 auto;
   
     &__header {
       display: contents;
@@ -36,6 +36,9 @@
       justify-content: center;
       display: flex;
       flex-direction: column;
+    }
+    &__cell:hover{
+      background-color: #bfbfbf;
     }
   }
   

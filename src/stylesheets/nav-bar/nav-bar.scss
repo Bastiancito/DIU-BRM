@@ -1,7 +1,10 @@
 .nav-bar {
   display: flex;
   background-color: #005e90;
-  padding-left: 20px;
-  justify-content: space-around;
-  padding: 10px;
+  // padding-left: 20px;
+  padding: 0 10lvw 0 10lvw;
+  justify-content: space-between;
+  align-items: center;
+  // padding: 10px;
+  height: 5lvh;
 }
