@@ -11,9 +11,11 @@ const Step6 = ({ onBack }) => {
         <li>Comprobante de Postulación</li>
 
       </ul>
-      
+
+      <div className='div__buttons'>
       <button className='button-admision' onClick={onBack}>Retroceder</button>
       <button className='button-admision' onClick={() => alert('¡Postulación completada!')}>Finalizar</button>
+      </div>
     </div>
   );
 };

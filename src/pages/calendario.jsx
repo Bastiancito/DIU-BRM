@@ -24,7 +24,7 @@ const Calendario = () => {
   };
 
   return (
-    <>
+    <div className="todo">
       <Link to="/home">
         <button className="text-button" style={{margin: "25px 0px 0px 25px"}} >Volver</button>
       </Link>
@@ -60,7 +60,7 @@ const Calendario = () => {
         </div>
       </section>
       <Footer className="footer" />
-    </>
+    </div>
   );
 };
 

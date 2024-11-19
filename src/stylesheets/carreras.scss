@@ -12,13 +12,23 @@ $text-color: #333;
     background-color: $primary-color;
     height: 8px;
     width: 100%;
+    background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image: radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+  background-size: 10px 10px;
+}
+
+.carreras__background{
+    background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image: radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+  background-size: 10px 10px;
+  height: 95lvh;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    // padding: 20px;
-    // font-family: Arial, sans-serif;
     height: 95lvh;
 }
 
@@ -96,6 +106,7 @@ table {
 th, td {
     padding: 12px;
     border: 1px solid #ddd;
+    background-color: white;
     text-align: left;
 }
 
@@ -105,5 +116,5 @@ thead th {
 }
 
 tbody tr:hover {
-    background-color: $gray-hover;
+    background-color: white;
 }

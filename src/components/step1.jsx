@@ -2,7 +2,7 @@ import React from 'react';
 
 const Step1 = ({ onNext }) => {
   return (
-    <div>
+    <div className='div__step'>
       <h3>Datos de Admisión</h3>
       <div>
         <label htmlFor='periodSelect'>Selecciona el período</label>

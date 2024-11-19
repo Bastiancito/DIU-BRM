@@ -40,7 +40,7 @@ const Carreras = () => {
     };
 
     return (
-        <div>
+        <div className='carreras__background'>
             <div className="header-line"></div>
             <div className="container">
                 <Link to="/home" className="back-button">volver</Link>
