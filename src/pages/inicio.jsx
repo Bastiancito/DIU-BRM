@@ -18,7 +18,7 @@ export const Inicio = () => {
         <div className="section__div">
           <h2 className="div__h2">Conoce nuestra oferta</h2>
           <ul className="div__ul div__ul--horizontal">
-            <li className="ul__li"><a className="li__a" href="/iniciar-sesion">Carreras Pregrado Diurno</a></li>
+            <li className="ul__li"><a className="li__a" href="/carreras">Carreras Pregrado Diurno</a></li>
             <li className="ul__li"><a className="li__a" href="/iniciar-sesion">Carreras Pregrado Vespertin</a>o</li>
             <li className="ul__li"><a className="li__a" href="/iniciar-sesion">Magísteres</a></li>
             <li className="ul__li"><a className="li__a" href="/iniciar-sesion">Doctorados</a></li>
@@ -33,7 +33,7 @@ export const Inicio = () => {
           <li className="ul__li"><a className="li__a" href="/iniciar-sesion">Matricúlate</a></li>
           <li className="ul__li"><a className="li__a" href="/iniciar-sesion">Admisión</a></li>
           <li className="ul__li"><a className="li__a" href="/iniciar-sesion">Universidad</a></li>
-          <li className="ul__li"><a className="li__a" href="/iniciar-sesion">Beneficios</a></li>
+          <li className="ul__li"><a className="li__a" href="/beneficios">Beneficios</a></li>
           <li className="ul__li"><a className="li__a" href="/iniciar-sesion">Aranceles</a></li>
           <li className="ul__li"><a className="li__a" href="/iniciar-sesion">Aranceles</a></li>
           <li className="ul__li"><a className="li__a" href="/iniciar-sesion">Simulador Paes</a></li>
